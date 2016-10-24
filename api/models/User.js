@@ -8,7 +8,31 @@
 module.exports = {
 
   attributes: {
-
+      name: {
+          type: 'string',
+          required: true,
+      },
+      email: {
+          type: 'string',
+          required: true,
+          email: true,
+          unique: true
+      },
+      password: {
+          type: 'string',
+          required: true,
+      },
+      isDriver: {
+          type: 'boolean',
+          defaultsTo: false
+      },
+      isAdmin: {
+          type: 'boolean',
+          defaultsTo: false
+      },
+      isCurrentlyDriving: {
+          type: 'boolean',
+          defaultsTo: false
+      }
   }
 };
-
